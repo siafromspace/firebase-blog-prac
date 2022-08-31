@@ -30,7 +30,7 @@ const Home = ({isAuth}) => {
                 <h1>{post.title}</h1>
               </div>
               <div className="deletePost">
-                {isAuth && post.id === auth.currentUser.uid && <button
+                {isAuth && post.author.id === auth.currentUser.uid && <button
                   onClick={() => {
                     deletePost(post.id);
                   }}
